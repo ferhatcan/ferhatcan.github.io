@@ -42,9 +42,8 @@ kramdown:
 
 collections:
   - school_projects
-
-collections:
   - master_thesis
+  - paper_reviews
 
 collections_dir: my_collections
 
@@ -59,6 +58,12 @@ collections:
     post_name: true
     date: true
     permalink: /:name
+  paper_reviews:
+    output: true
+    paper_name: true
+    paper_tag: true
+    date: true
+    permalink: /:name
 
 
 defaults:
@@ -67,6 +72,11 @@ defaults:
       type: "school_projects"
     values:
       layout: "school_projects"
+  - scope:
+      path: ""
+      type: "paper_reviews"
+    values:
+      layout: "paper_reviews"
   - scope:
       path: ""
       type: "master_thesis"

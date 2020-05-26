@@ -1,0 +1,23 @@
+---
+layout: default
+title: Paper Reviews
+---
+<h1>Paper Reviews</h1>
+
+{% assign sct = site.paper_reviews | group_by: "paper_tag" | sort: "date" %}
+
+{% for s in sct %}
+  <h3>{{ s.name | upcase }}<h3>
+  <ul>
+    {% for posts in s.items %}
+      <p>
+        <span class="large_font">
+          <a href="{{ posts.url | prepend: site.baseurl }}">{{ posts.paper_name }}</a>
+        </span>
+        <span class="small_font">
+          {{ posts.title | truncate: 100 }}
+        </span>
+      </p>
+    {% endfor %}
+  </ul>
+{% endfor %}
