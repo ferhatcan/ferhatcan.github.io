@@ -3,17 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>ENGINEER’S JOURNEY | Welcome to my Blog. It includes my master thesis journey and some technical reviews and tutorials. Interest areas machine learning, deep learning, super-resolution, infrared image enhancements, visual tracking, Algorithms &amp; data structures, tracking based on motion models, object detection …</title>
+<title>Master Thesis - Paper reviews 05 | ENGINEER’S JOURNEY</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="ENGINEER’S JOURNEY" />
+<meta property="og:title" content="Master Thesis - Paper reviews 05" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Welcome to my Blog. It includes my master thesis journey and some technical reviews and tutorials. Interest areas machine learning, deep learning, super-resolution, infrared image enhancements, visual tracking, Algorithms &amp; data structures, tracking based on motion models, object detection …" />
-<meta property="og:description" content="Welcome to my Blog. It includes my master thesis journey and some technical reviews and tutorials. Interest areas machine learning, deep learning, super-resolution, infrared image enhancements, visual tracking, Algorithms &amp; data structures, tracking based on motion models, object detection …" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<meta name="description" content="Zero Shot Super Resolution Paper" />
+<meta property="og:description" content="Zero Shot Super Resolution Paper" />
+<link rel="canonical" href="http://localhost:4000/zssr-review" />
+<meta property="og:url" content="http://localhost:4000/zssr-review" />
 <meta property="og:site_name" content="ENGINEER’S JOURNEY" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-24T07:24:00+03:00" />
 <script type="application/ld+json">
-{"description":"Welcome to my Blog. It includes my master thesis journey and some technical reviews and tutorials. Interest areas machine learning, deep learning, super-resolution, infrared image enhancements, visual tracking, Algorithms &amp; data structures, tracking based on motion models, object detection …","@type":"WebSite","url":"http://localhost:4000/","headline":"ENGINEER’S JOURNEY","name":"ENGINEER’S JOURNEY","@context":"https://schema.org"}</script>
+{"datePublished":"2020-05-24T07:24:00+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/zssr-review"},"description":"Zero Shot Super Resolution Paper","@type":"BlogPosting","url":"http://localhost:4000/zssr-review","headline":"Master Thesis - Paper reviews 05","dateModified":"2020-05-24T07:24:00+03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="ENGINEER'S JOURNEY" /><!-- Load jQuery -->
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -44,16 +46,49 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
-<h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">Apr 21, 2020</span>
-        <h3>
-          <a class="post-link" href="/blog/2020/04/21/first_post.html">
-            First Post!
-          </a>
-        </h3></li></ul>
+        <h2 id="zero-shot-super-resolution">Zero Shot Super Resolution</h2>
+<hr />
+<p><a href="https://arxiv.org/pdf/1712.06087v1.pdf">Paper</a></p>
 
-    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
+<ul>
+  <li>
+    <p>There is no prior training or examples. Internal recurrences of information in the image itself is used for training CNN(internal self-supervision)</p>
+  </li>
+  <li>
+    <p>They claim that the 3x3 or 5x5 like small patches in the image repeat themselves.(internal patch recurrence) Same structures with different scales can be found in the image.</p>
+  </li>
+  <li>
+    <p>For single input image, there are some LR-HR samples generated from itself.</p>
+  </li>
+</ul>
+
+<script type="math/tex; mode=display">I\downarrow s \rightarrow I: input\, image\quad s : scale\, factor</script>
+
+<p><img src="images/ZSSR.png" alt="" /></p>
+
+<ul>
+  <li>
+    <p>Input image $I$ is divided into some patches. $I_{patch}\downarrow s$ is generated. The dataset becomes ${(I_{downscaled}, I_{patch})}$.$I_{patch}$ becomes ground truth and  $I_{patch}$ becomes input for the network.</p>
+  </li>
+  <li>
+    <p>Rotation in 4 direction and mirroring in 2 direction are added to enrich dataset by x8.</p>
+  </li>
+  <li>
+    <p>Gradually increased scale factors added to system. $(s_1, s_2, \cdots, s_m = s)$ For each scale factor $s_i$, $(HR_i, LR)$ pair added to dataset.</p>
+  </li>
+  <li>
+    <p>A non-linear downscaling kernel can improve the result.</p>
+  </li>
+  <li>
+    <p>Adding noise to LR samples make network more robust and network learns only correlated informations.</p>
+  </li>
+  <li>
+    <p>It took 54 sec for single image(independent from image size) at single scale factor on a Tesla K80 GPU. If gradually scale factor with 6 intermediate scales is used, it took 5 mins. Final SR image generation is negligible.</p>
+  </li>
+  <li>
+    <p><a href="http://www.wisdom.weizmann.ac.il/~vision/zssr/">Project Website for samples</a></p>
+  </li>
+</ul>
 
       </div>
     </main><footer class="site-footer h-card">

@@ -1,0 +1,14 @@
+---
+layout: default
+title: Thesis
+---
+<h1>Thesis</h1>
+
+{% assign sorted = site.master_thesis | sort 'date' %}
+
+<ul>
+  {% for posts in sorted %}
+      <a href="{{ posts.url | prepend: site.baseurl }}">{{ posts.title }}</a>
+      <p class="post-excerpt">{{ posts.post_name | truncate: 160 }}</p>
+        {% endfor %}
+</ul>

@@ -3,17 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>ENGINEER’S JOURNEY | Welcome to my Blog. It includes my master thesis journey and some technical reviews and tutorials. Interest areas machine learning, deep learning, super-resolution, infrared image enhancements, visual tracking, Algorithms &amp; data structures, tracking based on motion models, object detection …</title>
+<title>Master Thesis - Paper reviews 04 | ENGINEER’S JOURNEY</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="ENGINEER’S JOURNEY" />
+<meta property="og:title" content="Master Thesis - Paper reviews 04" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Welcome to my Blog. It includes my master thesis journey and some technical reviews and tutorials. Interest areas machine learning, deep learning, super-resolution, infrared image enhancements, visual tracking, Algorithms &amp; data structures, tracking based on motion models, object detection …" />
-<meta property="og:description" content="Welcome to my Blog. It includes my master thesis journey and some technical reviews and tutorials. Interest areas machine learning, deep learning, super-resolution, infrared image enhancements, visual tracking, Algorithms &amp; data structures, tracking based on motion models, object detection …" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<meta name="description" content="Second-order Attention Network for Single Image Super-Resolution" />
+<meta property="og:description" content="Second-order Attention Network for Single Image Super-Resolution" />
+<link rel="canonical" href="http://localhost:4000/sansr-review" />
+<meta property="og:url" content="http://localhost:4000/sansr-review" />
 <meta property="og:site_name" content="ENGINEER’S JOURNEY" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-23T07:24:00+03:00" />
 <script type="application/ld+json">
-{"description":"Welcome to my Blog. It includes my master thesis journey and some technical reviews and tutorials. Interest areas machine learning, deep learning, super-resolution, infrared image enhancements, visual tracking, Algorithms &amp; data structures, tracking based on motion models, object detection …","@type":"WebSite","url":"http://localhost:4000/","headline":"ENGINEER’S JOURNEY","name":"ENGINEER’S JOURNEY","@context":"https://schema.org"}</script>
+{"datePublished":"2020-05-23T07:24:00+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/sansr-review"},"description":"Second-order Attention Network for Single Image Super-Resolution","@type":"BlogPosting","url":"http://localhost:4000/sansr-review","headline":"Master Thesis - Paper reviews 04","dateModified":"2020-05-23T07:24:00+03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="ENGINEER'S JOURNEY" /><!-- Load jQuery -->
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -44,16 +46,71 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
-<h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">Apr 21, 2020</span>
-        <h3>
-          <a class="post-link" href="/blog/2020/04/21/first_post.html">
-            First Post!
-          </a>
-        </h3></li></ul>
+        <h2 id="second-order-attention-network-for-single-image-super-resolution">Second-order Attention Network for Single Image Super-Resolution</h2>
 
-    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
+<ul>
+  <li>Contributions:
+    <ul>
+      <li>Adding second order Attention to learn feature interdependencies</li>
+      <li>(It is very similar to RCAN that is used to first order Attention)</li>
+    </ul>
+
+    <p align="center">
+  <img src="images\SANSR_algorithm.png" />
+</p>
+    <p align="center">
+  <em> Fig.1: SANSR blocks</em>
+</p>
+  </li>
+</ul>
+
+<p>Core parts of the system design:</p>
+<ol>
+  <li>
+    <p><strong>Shallow feature extraction</strong> <br />
+    A basic convolution network is used to extract shallow features.</p>
+  </li>
+  <li><strong>Deep feature extraction</strong><br />
+    <ul>
+      <li><em>Region-Level Non-Local Network(<strong>RL-NL</strong>)</em><br />
+  Non-Local Neural Network is used</li>
+      <li><em>Share Source Residual Group(<strong>SSRG</strong>)</em>
+        <ul>
+          <li>Local Source Residual Attention Group(<strong>LSRAG</strong>)
+            <ul>
+              <li>Residual blocks</li>
+              <li>Second Order Channel Attention(<strong>SOCA</strong>)</li>
+            </ul>
+          </li>
+          <li>Share Source Skip Connection(<strong>SSC</strong>)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Upscale</strong><br />
+ ESPCNN upscaling method is used. It uses 2 convolution layer to extract features and image is scaled with phase shift method. (This should be reviewed too)</li>
+  <li><strong>Reconstruction</strong><br />
+ Reconstruction of RGB image from upscale network.</li>
+</ol>
+
+<p align="center">
+  <img src="images\SANPage 1.png" />
+</p>
+<p align="center">
+  <em> Fig.2: SSRG-part1</em>
+</p>
+<p align="center">
+  <img src="images\SANPage 2.png" />
+</p>
+<p align="center">
+  <em> Fig.3: SSRG-part2</em>
+</p>
+<p align="center">
+  <img src="images\SANPage 3.png" />
+</p>
+<p align="center">
+  <em> Fig.4: SSRG-part3</em>
+</p>
 
       </div>
     </main><footer class="site-footer h-card">

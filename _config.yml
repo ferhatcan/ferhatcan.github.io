@@ -34,6 +34,53 @@ github_username:  ferhatcan
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-katex
+
+markdown: kramdown
+kramdown:
+  math_engine: katex
+
+collections:
+  - school_projects
+
+collections:
+  - master_thesis
+
+collections_dir: my_collections
+
+collections:
+  school_projects:
+    output: true
+    project_name: true
+    project_part: true
+    permalink: /:name
+  master_thesis:
+    output: true
+    post_name: true
+    date: true
+    permalink: /:name
+
+
+defaults:
+  - scope:
+      path: ""
+      type: "school_projects"
+    values:
+      layout: "school_projects"
+  - scope:
+      path: ""
+      type: "master_thesis"
+      values:
+        layout: "master_thesis"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

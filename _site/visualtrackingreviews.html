@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Visualtrackingreviews | ENGINEER’S JOURNEY</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Visualtrackingreviews" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Visual Tracking Review" />
+<meta property="og:description" content="Visual Tracking Review" />
+<link rel="canonical" href="http://localhost:4000/visualtrackingreviews" />
+<meta property="og:url" content="http://localhost:4000/visualtrackingreviews" />
+<meta property="og:site_name" content="ENGINEER’S JOURNEY" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-26T13:22:42+03:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-05-26T13:22:42+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/visualtrackingreviews"},"description":"Visual Tracking Review","@type":"BlogPosting","url":"http://localhost:4000/visualtrackingreviews","headline":"Visualtrackingreviews","dateModified":"2020-05-26T13:22:42+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="ENGINEER'S JOURNEY" /><!-- Load jQuery -->
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!-- Load KaTeX -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">ENGINEER&#39;S JOURNEY</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Projects.html">Projects</a><a class="page-link" href="/Thesis.html">Thesis</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1>Machine Vision Project - Paper Reviews</h1>
+<h2>Visual Tracking papers are reviewed.</h2>
+
+<h2 id="visual-tracking-review">Visual Tracking Review</h2>
+
+<p><strong>Author:</strong> <em>Ferhat Can ATAMAN</em> &lt;/br&gt;
+<strong>Created In</strong> <em>06/04/2020</em> &lt;/br&gt;
+<strong>Last Modified:</strong> <em>07/04/2020</em></p>
+
+<h6 id="aim-of-this-review-is-to-investigate-some-of-the-core-visual-tracking-papers-that-give-solutions-to-basic-problems-in-area-before-going-on-deep-learning-methods-these-review-can-give-good-intuition-about-the-field"><em>Aim of this review is to investigate some of the core visual tracking papers that give solutions to basic problems in area. Before going on deep learning methods, these review can give good intuition about the field.</em></h6>
+
+<hr />
+
+<h3 id="core-papers">Core papers</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><a href="https://www.cs.colostate.edu/~draper/papers/bolme_cvpr09.pdf">Average of Synthetic Exact Filters (<em>ASEF</em>) CVPR09</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><a href="https://www.cs.colostate.edu/~vision/publications/bolme_cvpr10.pdf">Visual Object Tracking using Adaptive Correlation Filters (<em>MOSSE</em>) CVPR10</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Target-Aware_Deep_Tracking_CVPR_2019_paper.pdf">Target Aware Deep Tracking (<em>TADT</em>) CVPR19</a></li>
+</ul>
+
+<h3 id="1-asef-cvpr09">1. <strong>ASEF (CVPR09)</strong></h3>
+
+<p>It tries to solve robustness problem. That is changing in the appearance should not effect results of the localization.
+There should be training set to learn <em>custom correlation filter</em>.</p>
+
+<p align="center">
+  <img width="300" src="images\ASEF.png" />
+</p>
+<p align="center">
+  <em> Fig.1: ASEF algorithm explanation</em>
+</p>
+
+<ul>
+  <li>Correlation between the image and filter should give single peak (impulse) response in correlation plane. This peak is the center of our object. (In this paper, the object is the eye localization)
+    <ul>
+      <li>However, in real life, relative peak strength of responses to changing targets can be unpredictable. Instead of using ideal impulse response in the desired output, Gaussian shape response is used.</li>
+    </ul>
+
+    <script type="math/tex; mode=display">g_i(x, y) = e^{\frac{(x - x_i)^2 + (y - y_i)^2}{\sigma^2}}</script>
+
+    <script type="math/tex; mode=display">(x, y): center\, of\, eye\, in\, training\, images</script>
+
+    <ul>
+      <li>The closer points to the center of eye have higher coefficients and these coefficients’ decay rate is decided with $\sigma$.</li>
+    </ul>
+  </li>
+  <li>
+    <p>After generating desired outputs for dataset, (that is <script type="math/tex">g_i(x,y)</script> for <script type="math/tex">i^{th}</script> training example) exact correlation filters are found.</p>
+
+    <script type="math/tex; mode=display">g(x, y) = (f \otimes h)(x, y)</script>
+
+    <script type="math/tex; mode=display"> f(x, y): training\, example, \quad h(x, y): filter</script>
+
+    <ul>
+      <li>Convolution in spatial domain is equal to element-wise multiplication in Fourier Domain.</li>
+    </ul>
+
+    <script type="math/tex; mode=display"> G(w, v) = F(w, v)H^*(w,v) \rightarrow H^*(w, v) = \frac{G(w, v}{F(w, v)}</script>
+
+    <ul>
+      <li>
+        <p>Filters are found in Fourier domain. Each filter gives exact result on each corresponding training image. It can be considered as weak classifiers. This method called as <strong>bagging</strong>. If weak classifiers are unbiased, their summation converges upon a classifier with zero variance error.</p>
+      </li>
+      <li>
+        <p>Exact filters can be averaged in both Domain. If exact filters are in spatial domain, they can be cropped before averaging which allows ASEF filters can be constructed from  different size training images.</p>
+      </li>
+    </ul>
+
+    <p><script type="math/tex">H^*_\mu(w, v) = \frac{1}{N}\sum_{i=1}^N H^*_i(w, v)  **</script>
+<script type="math/tex">h_\mu(x, y) = \frac{1}{N} \sum_{i=1}^N h_\mu(x, y) **</script></p>
+
+    <ul>
+      <li>A single robust filter is obtained to determine position of the target at arbitrary image.</li>
+    </ul>
+  </li>
+  <li>
+    <p>To find ASEF filter, RST(Rotation, Scale, Translation) is applied to augment dataset and it makes filters more reliable.</p>
+
+    <ul>
+      <li>
+        <p>All images are normalized to remove some effects.</p>
+
+        <ul>
+          <li>$log(log(v + 1))$ normalization applied to the pixel values to reduce effects of shadows and intense lighting.</li>
+          <li>Normalize images to give 0.0 mean and 1.0 squared sum to obtain consistent intensity values.</li>
+          <li>Cosine window (?) is applied to reduce frequency effects of the edge of the images when transformed by FFT(fast Fourier transform).</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-mosse-cvpr10">2. <strong>MOSSE (CVPR10)</strong></h3>
+
+<p>It tries to solve <em>visual tracking problem</em> with using correlation filters that is similar to ASEF. In this approach, correlation filter is updated online according to current target appearance. The target window is selected in first frame of the video, then MOSSE initializes tracking. First, the initial MOSSE filter is constructed with target window and its’ N (<em>hyperparameter</em>) affine permutations like Rotation, Scale and Translation (RST). After that, in each frame, MOSSE filter updating with moving average that is new filter has smaller effect than early calculations.</p>
+
+<p>Two main contribution exist:</p>
+
+<ul>
+  <li>Smaller number of training dataset can be used.</li>
+  <li>Filter can be updated online that increases adaptation ability of the approach when the appearance of the target changes in time.</li>
+</ul>
+
+<p>ASEF needs too much training sample to obtain reliable correlation filter $H(w, v)$. (When we have small number of train data, element-wise division in frequency domain can be unstable. The reason behind this the training image contains very little energy that is $F_i \odot F_i^<em>$ closes to zero.</em>) It becomes too slow for tracking purpose.</p>
+
+<script type="math/tex; mode=display"> H_i^* = \frac{G_i}{F_i} = \frac{G_i \odot F_i^* }{F_i\odot F_i^* } \quad ...ASEF</script>
+
+<ul>
+  <li>
+    <p><strong>MOSSE FILTER:</strong> The approach of obtaining correlation filter in MOSSE is different from ASEF. For whole training sample, minimum squared error solution is tried to find.</p>
+
+    <ul>
+      <li>Firstly, optimization problem is defined as below:</li>
+    </ul>
+
+    <script type="math/tex; mode=display">\min_{H^* } \sum_{i}\left| F_i \odot H^* - G_i \right| ^2</script>
+
+    <ul>
+      <li>Then to find optimal $H^{* }$, take derivative of above formula and equalize to zero.</li>
+    </ul>
+
+    <script type="math/tex; mode=display">0 = \frac{\partial}{\partial H_{wv}^{* }} \sum_{i}\left| F_{iwv} \odot H^{* }_{wv} - G_{iwv} \right|^2</script>
+
+    <script type="math/tex; mode=display">0 = \frac{\partial}{\partial H_{wv}^{* }} \sum_i (F_{iwv} \odot H^{* }_{wv} - G_{iwv}) (F_{iwv} \odot H^{* }_{wv} - G_{iwv})^{* }</script>
+
+    <script type="math/tex; mode=display">0 = \frac{\partial}{\partial H_{wv}^{* }} \sum_i F_{iwv}F_{iwv}^{* }H_{wv}H_{wv}^{* } - F_{iwv}G_{iwv}^{* }H_{wv}^{* } - F_{iwv}^{* }G_{iwv}H_{wv} + G_{iwv}G_{iwv}^{* }</script>
+
+    <script type="math/tex; mode=display">H_{wv} = \frac{\sum_i F_{iwv}G_{iwv}^{* }}{\sum_i F_{iwv}F_{iwv}^{* }}</script>
+
+    <ul>
+      <li>Then, rewrite above result in array notation:</li>
+    </ul>
+
+    <script type="math/tex; mode=display">H_{i} = \frac{\sum_i F_{i} \odot G_{i}^{* }}{\sum_i F_{i} \odot F_{i}^{* }}</script>
+
+    <ul>
+      <li>We need to find $H^{* }$ so;</li>
+    </ul>
+
+    <script type="math/tex; mode=display"> H_{i}^{* } = \frac{\sum_i G_{i} \odot F_{i}^{* }}{\sum_i F_{i} \odot F_{i}^{* }} \quad ...MOSSE</script>
+
+    <ul>
+      <li>There are some interesting results in this derivation. The numerator is the correlation between the input and desired output and the denominator is the energy spectrum of the input.</li>
+    </ul>
+  </li>
+  <li>
+    <p>MOSSE is more stable than ASEF when there is smaller training set. Because, when there is an sample with low energy level, it makes denominator of the ASEF formula to zero. When same case occurs in MOSSE, because of sum of samples is calculated, the denominator rarely becomes smaller number that causes unstability.</p>
+  </li>
+  <li>
+    <p><strong>ONLINE UPDATES:</strong> Moving average algorithm is used to update filter.</p>
+
+    <ul>
+      <li>For ASEF filters:</li>
+    </ul>
+
+    <script type="math/tex; mode=display">H_i^{* } = \eta\frac{G_i \odot F_i}{F_i \odot F_i^{* }} + (1 - \eta)H_{i-1}^{* }</script>
+
+    <ul>
+      <li>For MOSSE filter:</li>
+    </ul>
+
+    <script type="math/tex; mode=display">H_i^{* } = \frac{A_i}{B_i}</script>
+
+    <p><script type="math/tex">A_i = \eta (G_i \odot F_i) + (1 - \eta)A_{i-1}</script>
+<script type="math/tex"> B_i = \eta (F_i \odot F_i^{* }) + (1 - \eta)B_{i-1}</script></p>
+
+    <ul>
+      <li>0.125 is recommended for $\eta$<em>(learning rate)</em>.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>FAILURE DETECTION &amp; PSR:</strong> Peak to sidelobe ratio (PSR) is calculated to measure peak strength of correlation result. Maximum peak value $g_{max}$, sidelobe mean $\mu_{sl}$ and standart deviation $\sigma_{sl}$ is calculated from correlation output $g$. Sidelobe is the whole correlation output excluding the peak and its’ 11x11 neighborhood pixels.</p>
+  </li>
+</ul>
+
+<script type="math/tex; mode=display"> PSR = \frac{g_{max} - \mu_{sl}}{\sigma_{sl}}</script>
+
+<ul>
+  <li>When PSR is higher than 20, it shows the peak is strong. When PSR drops to 7, it means target is occluded or tracking has failed.</li>
+</ul>
+
+<h3 id="3-tadt-cvpr19">3. <strong>TADT (CVPR19)</strong></h3>
+
+<p>The main purpose of this approach is following. <strong>Pre-trained CNN</strong> that is trained for object classification task can be used to extract features of an object. However, the classification network have tendency to separate inter-class differences. In tracking scenarios, tracking objects can be in same class. That is there could be 2 person crossing each other. In single target tracking, the intra-class separation is also important. Thus, from pre-trained network, features that mostly activate our desired object can be found. If we found these features, to track object, only these features can be used to localize object location on the next frame. For feature comparison, Siamese matching network is used.</p>
+
+<p>Basically, the important features should be selected using following equation: $\chi^{‘} = \varphi(\chi;\Delta)$. $\chi$ is input features and $\varphi(.)$ function selects important features according to the channel importance, $\Delta$.</p>
+
+<script type="math/tex; mode=display">\Delta_i = G_{AP}(\frac{\partial L}{\partial z_i})</script>
+
+<p>where $G_{AP}(.)$ global average pooling function, $L$ is the loss function to select features and $z_i$ is the output feature of $i^{th}$ filter.</p>
+
+<p>There are 2 loss function to select important features. Target active features via regression loss and Scale sensitive features via ranking loss.</p>
+
+<p>For the given object, firstly, pre-trained features are calculated. Then, losses are calculated and gradients are found to select features using above equations.</p>
+
+<ul>
+  <li><strong>Regression Loss($L_{reg}$):</strong> In feature maps, object regions are activated and background regions are surpassed. A simple regression network is designed to activate object regions only. To do that, we should fit the the regression network to give desired output. Inputs are feature channels and desired output can be considered as a 2D Gaussian with a peak at object center and have a sigma,$\sigma$, to determine spread of the Gaussian function. This simple regression network is trained using ridge regression loss in blow equation where $Y(i,j)$ is the desired output, $X_{i,j}$ a feature channel and $W$ is the weights that is learned.</li>
+</ul>
+
+<script type="math/tex; mode=display">Ridge\, Regression\, Loss \rightarrow L_{reg} = \| Y(i, j) - W * X_{i, j}\|^2 + \lambda\|W\|^2</script>
+
+<ul>
+  <li>With gradient of ridge regression loss wrt. input channel becomes input to $G_{AP}(.)$ function.</li>
+</ul>
+
+<script type="math/tex; mode=display">\frac{\partial L_{reg}}{\partial x_{in}} = \sum_{i, j} 2(Y(i, j) - W * X_o(i, j)) \times W</script>
+
+<ul>
+  <li><strong>Ranking Loss($L_{rank}$):</strong> It tries to find scale sensitive features. To do that, a network is defined. $f(x;w)$ predict scales. Training samples are collected from features from different scales. Then, pairwise comparison is done to calculate ranking loss.</li>
+</ul>
+
+<script type="math/tex; mode=display">Rankin\, Loss\, \rightarrow L_{rank} = log(1 + \sum_{(x_i, x_j) \in \Omega} exp(f(x_i) - f(x_j)))</script>
+
+<script type="math/tex; mode=display">\frac{\partial L_{rank}}{\partial x_{in}} = \frac{\partial L_{rank}}{\partial f(x_{in})} \times W</script>
+
+<blockquote>
+  <blockquote>
+    <p><strong>WARNING: This part can be more clear. In paper, it is not explained very well. <a href="https://arxiv.org/pdf/1704.03135.pdf">The inspired paper</a> should be read.</strong></p>
+  </blockquote>
+</blockquote>
+
+<p>Above loss calculating networks to select important feature channels are trained with first frame of the tracking sequence. Thus, in initializing phase, target aware features from pre-trained network are decided and after these process, until the end of the tracking, same feature channels are used.</p>
+
+<ul>
+  <li>For Siamese matching network, current target and search space to localize target in the current frame are given. Target search space is 3 times larger than the target dimensions. Initial target, $x_1$ and search region in current frame, $z_t$, predicted target position in frame t is calculated as below:</li>
+</ul>
+
+<script type="math/tex; mode=display">I = \arg\max_{p}\chi^{'}(x_1) * \chi^{'}(z_t)</script>
+
+<p>where ${* }$ denotes convolution operation.</p>
+
+<p>Overall network architecture in the paper is shown in Fig.2. Dashed part is calculated only in initialization part.</p>
+
+<p align="center">
+    <img width="750" src="images\TADT_algorithm.png" />
+  </p>
+<p align="center">
+    <em> Fig.2: TADT algorithm explanation</em>
+  </p>
+
+<p>To conclude, this method does not obtain best accuracy on dataset but it is very fast compared to other methods.</p>
+
+
+<h1>Other Posts</h1>
+<ul>
+  
+  
+    <li><a href="/visualtrackingreviews">Machine Vision Project - Paper Reviews</a></li>
+  
+</ul>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">ENGINEER&#39;S JOURNEY</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">ENGINEER&#39;S JOURNEY</li><li><a class="u-email" href="mailto:ataman.ferhatcan@gmail.com">ataman.ferhatcan@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/ferhatcan"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ferhatcan</span></a></li><li><a href="https://www.twitter.com/----"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">----</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Welcome to my Blog. It includes my master thesis journey and some technical reviews and tutorials. Interest areas machine learning, deep learning, super-resolution, infrared image enhancements, visual tracking, Algorithms &amp; data structures, tracking based on motion models, object detection ...</p>
+      </div>
+    </div>
+
+  </div>
+
+  
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<h1>{{ page.project_name }}</h1>
+<h2>{{ page.project_part }}</h2>
+
+{{ content }}
+
+<h1>Other Posts</h1>
+<ul>
+  {% assign filtered_posts = site.school_projects | where: 'project_name', nil%}
+  {% for post in filtered_posts %}
+    <li><a href="{{ post.url | prepend: site.baseurl}}">{{ post.project_name }}</a></li>
+  {% endfor %}
+</ul>
