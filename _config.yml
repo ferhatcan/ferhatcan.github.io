@@ -21,10 +21,7 @@
 title: ENGINEER'S JOURNEY
 email: ataman.ferhatcan@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-    Welcome to my Blog. It includes my master thesis journey and some technical
-    reviews and tutorials. Interest areas machine learning, deep learning,
-    super-resolution, infrared image enhancements, visual tracking, Algorithms &
-    data structures, tracking based on motion models, object detection ...
+    A happy engineer to make world better :)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ----
